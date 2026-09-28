@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Kotlin in Separate Console",
+            "type": "shell",
+            "command": "cmd.exe",
+            "args": [
+                "/c",
+                "start",
+                "\"Kotlin Console\"",
+                "cmd.exe",
+                "/k",
+                "kotlinc \"${file}\" -include-runtime -d \"${fileDirname}\\${fileBasenameNoExtension}.jar\" && java -jar \"${fileDirname}\\${fileBasenameNoExtension}.jar\""
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
